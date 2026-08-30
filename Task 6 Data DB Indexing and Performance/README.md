@@ -1,38 +1,27 @@
-#Task 6: Database Indexing & Performance
-📌 ##Objective
+# Task 6: Database Indexing & Performance
 
-Optimize SQL query performance using database indexing, EXPLAIN, and EXPLAIN ANALYZE.
+## Objective
 
-🗄️ ##Database
-Database: student_performance
-Table: Students
-Records: 4,000
-Tool: MySQL Workbench
+Optimize SQL query performance using database indexing and analyze query execution plans using `EXPLAIN` and `EXPLAIN ANALYZE`.
 
-##Indexes Created
+## Database Details
+
+- Database: `student_performance`
+- Table: `Students`
+- Records: 4,000
+- DBMS: MySQL
+- Tool: MySQL Workbench
+
+## Table Structure
+
+The `Students` table contains the following columns:
+
+`student_id`, `student_name`, `department`, `branch`, `semester`, `marks`, `exam_date`
+
+## Indexing
+
+Indexes were created on the `branch` and `marks` columns to improve query performance.
+
+```sql
 CREATE INDEX idx_branch ON Students(branch);
 CREATE INDEX idx_marks ON Students(marks);
-
-⚡##Performance Analysis
-Query	Before Index	After Index
-branch = 'CSE'	4,000 rows	~1,000 rows
-marks >= 90	4,000 rows	722 rows
-
-Before indexing, MySQL performed a full table scan (ALL). After indexing, it used ref and range index scans.
-
-📊 ##EXPLAIN ANALYZE
-For marks >= 90:
-Index: idx_marks
-Actual Rows: 722
-Actual Time: 0.362–1.72 ms
-Method: Index Range Scan
-
-#Key Takeaway
-Indexing reduces unnecessary table scans and improves query efficiency by enabling faster data retrieval.
-
-##Technologies
-MySQL | MySQL Workbench | SQL | Indexing | EXPLAIN | EXPLAIN ANALYZE
-
-📁 ##Files
-DB indexing & performance(T6).sql — SQL implementation
-Indexing.jpg — Task 6 poster
