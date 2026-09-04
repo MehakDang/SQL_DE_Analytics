@@ -44,5 +44,5 @@ Created `trg_student_insert` to automatically record newly inserted students in 
 - Triggers
 
 ## Files
-- `Task_7_Stored_Procedures_Triggers.sql` — Complete SQL implementation
+- `Stored_Procedures_Triggers(T7).sql` — Complete SQL implementation
 - `Task7png` — Task summary and results
