@@ -14,7 +14,7 @@ To automate database operations using **Stored Procedures and Triggers** and mai
 Created `GetStudentsByMarks()` to retrieve students whose marks are greater than or equal to a specified value.
 
 ```text
-CALL GetStudentsByMarks(90);```
+CALL GetStudentsByMarks(90);
 
 ### 2. UPDATE Trigger
 Created `trg_student_marks_update` to automatically record changes in student marks.
