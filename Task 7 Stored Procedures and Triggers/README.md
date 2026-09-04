@@ -15,6 +15,7 @@ Created `GetStudentsByMarks()` to retrieve students whose marks are greater than
 
 ```text
 CALL GetStudentsByMarks(90);
+```
 
 ### 2. UPDATE Trigger
 Created `trg_student_marks_update` to automatically record changes in student marks.
